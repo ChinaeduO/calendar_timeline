@@ -277,6 +277,11 @@ class _CalendarTimelineState extends State<CalendarTimeline> {
     _generateDays(_months[index]);
     _moveToDayIndex(0);
     setState(() {});
+
+    if(!widget.showDays) {
+      _selectedDate = _months[index];
+      widget.onDateSelected(_selectedDate);
+    }
   }
 
   void _onSelectDay(int index) {
