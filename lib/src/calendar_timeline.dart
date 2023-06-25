@@ -31,6 +31,7 @@ class CalendarTimeline extends StatefulWidget {
     this.shrink = false,
     this.locale,
     this.showYears = false,
+    this.showDays = true,
   })  : assert(
           initialDate.difference(firstDate).inDays >= 0,
           'initialDate must be on or after firstDate',
@@ -70,6 +71,8 @@ class CalendarTimeline extends StatefulWidget {
   /// If true, it will show a separate row for the years.
   /// It defaults to false
   final bool showYears;
+
+  final bool showDays;
 
   @override
   State<CalendarTimeline> createState() => _CalendarTimelineState();
@@ -315,6 +318,7 @@ class _CalendarTimelineState extends State<CalendarTimeline> {
       children: <Widget>[
         if (widget.showYears) _buildYearList(),
         _buildMonthList(),
+        if(widget.showDays)
         _buildDayList(),
       ],
     );
