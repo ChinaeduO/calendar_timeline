@@ -30,6 +30,7 @@ class MonthItem extends StatelessWidget {
               ? activeColor ?? const Color(0xFF002265)
               : color ?? Colors.black87,
           fontWeight: isSelected ? FontWeight.bold : FontWeight.normal,
+          textAlign: TextAlign.center,
         ),
       ),
     );
