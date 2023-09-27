@@ -28,9 +28,8 @@ class MonthItem extends StatelessWidget {
           fontSize: shrink ? 10 : 14,
           color: isSelected
               ? activeColor ?? const Color(0xFF002265)
-              : color ?? Colors.black87,
-          fontWeight: isSelected ? FontWeight.bold : FontWeight.normal,
-          textAlign: TextAlign.center,
+              : color?.withOpacity(0.4) ?? Colors.black87.withOpacity(0.4),
+          fontWeight: isSelected ? FontWeight.bold : FontWeight.normal
         ),
       ),
     );

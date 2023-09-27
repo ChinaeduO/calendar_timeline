@@ -42,7 +42,9 @@ class YearItem extends StatelessWidget {
                   : small
                       ? 12
                       : 20,
-              color: color ?? Colors.black87,
+              color: isSelected
+                  ? color ?? const Color(0xFF002265)
+                  : Colors.black87.withOpacity(0.2),
               fontWeight: FontWeight.bold,
             ),
           ),
